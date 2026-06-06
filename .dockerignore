@@ -1,0 +1,17 @@
+@"
+.venv
+venv
+env
+
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+.git
+.gitignore
+
+readme.md
+*.md
+
+"@ | Out-File -FilePath .dockerignore -Encoding utf8
