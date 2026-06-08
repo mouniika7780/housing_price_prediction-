@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List
-
+import datetime
 class HouseFeatures(BaseModel):
     square_footage: float = Field(..., gt=0, description="Square footage of the house")
     bedrooms: int = Field(..., ge=1, le=10, description="Number of bedrooms")
@@ -44,3 +44,5 @@ class HealthResponse(BaseModel):
     status: str
     model_loaded: bool
     message: str
+    seconds: float
+    service_time:datetime.timedelta
